@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Vue.js tester</title>
+<!-- <link href="css/some-stylesheet.css"
+      rel="stylesheet"/> -->
+<script src="https://unpkg.com/vue@2.5.3/dist/vue.js">
+</script>
+</head>
+<body>
+
+    <div id="app">
+        <h1 v-once>{{ title }}</h1>
+        <p>{{ sayHello() }} - <a v-bind:href="link">IOdesk</a></p>
+        <hr />
+        <p v-html="finishedLink"></p>
+    </div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello World!',
+            link: "https://iodesk.net",
+            finishedLink: '<a href="https://iodesk.net">IOdesk</a>'
+        },
+        methods: {
+            sayHello: function() {
+                this.title = "Hello!";
+                return this.title;
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Vue.js tester</title>
+<!-- <link href="css/some-stylesheet.css"
+      rel="stylesheet"/> -->
+<script src="https://unpkg.com/vue@2.5.3/dist/vue.js">
+</script>
+</head>
+<body>
+
+    <div id="app">
+        <p>{{ hello }}</p>
+    </div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            hello: "Hello, world!"
+        }
+    });
+</script>
+</body>
+</html>

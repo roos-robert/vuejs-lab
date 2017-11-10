@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Vue.js tester</title>
+<!-- <link href="css/some-stylesheet.css"
+      rel="stylesheet"/> -->
+<script src="https://unpkg.com/vue@2.5.3/dist/vue.js">
+</script>
+</head>
+<body>
+
+    <div id="app">
+        <button @click="changeLink">Click to change link</button>
+        <a :href="link">Link</a>
+    </div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            link: "https://iodesk.net"
+        },
+        methods: {
+            changeLink: function()
+            {
+                this.link = "https://google.se";
+            }
+        }
+    });
+</script>
+</body>
+</html>
